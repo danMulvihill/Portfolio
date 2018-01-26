@@ -6,14 +6,9 @@ body{
 h2, h3{
     margin: 0;
 }
-header{
-    background: #334;
-    color: white;
-    padding: 0 15px;
-}
-header p{
-    font-size: 1.1em;
-}
+
+
+
 .top-nav{
     width: 100%;
     position: fixed;
@@ -33,24 +28,30 @@ header p{
     list-style-type: none;
     display: inline-block;
     padding: 5px 2%;
+}
 
+
+
+.container{
+    margin-top: 35px;
 }
-.top-nav li a{
-    font-weight: normal;
-    color: blue;
-    text-decoration: none;
-    
+
+header{
+    background: #334;
+    color: white;
+    padding: 0 15px;
 }
+header p{
+    font-size: 1.1em;
+}
+
 section{
     padding: 5px;
 }
-.container{
-    max-width: 900px;
-    margin: 0 auto;
-}
+
 .row{
-    clear: both;
-    overflow: auto;
+    /* clear: both;
+    overflow: auto; */
     /* margin-top: 10px; */
     border: 1px solid brown;
 }
@@ -63,18 +64,36 @@ section{
     background-color:#bbb;
     text-align: center;
 }
+.linked{
+    transition: all 0.9s;
+}
+.linked:hover{
+    transform: scale(1.1,1.1);
+    background: brown;
+}
+
+.linked a{
+    transition: all 0.9s;
+    text-decoration: none;
+    color:blue;
+}
+.linked a:hover{
+    color: cyan;
+}
+
 
 @media all and (min-width: 500px){
     .container{
         background: #334;
         padding: 8px;
         border-radius: 1%;
-        margin-top: 25px;
+        max-width: 900px;
+        margin: 35px auto 0;
     }
 
     .row{
         display: flex;
-        flex-wrap: flex;
+        flex-wrap: no-wrap;
         border: none;
         margin-top: 10px;
     }
